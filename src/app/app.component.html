@@ -32,7 +32,7 @@
         </tr>
       </thead>
       <tbody>
-        @for( operation of operationsList | filter : 'customerName' :
+        @for( operation of operationsList$ | async | filter : 'customerName' :
         searchTerm; track $index) {
         <tr>
           <td class="operations__table-cell">{{ operation.customerName }}</td>
